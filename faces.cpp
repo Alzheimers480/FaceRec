@@ -34,7 +34,7 @@ int main(int argc, const char *argv[]) {
   
   model->train(images,labels);
 
-  Mat guess = imread("non-git/s11/10.pgm", CV_LOAD_IMAGE_GRAYSCALE);
+  Mat guess = imread("non-git/s10/10.pgm", CV_LOAD_IMAGE_GRAYSCALE);
   int label_guess = model->predict(guess);
 
   cout << label_guess << endl;

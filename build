@@ -1,2 +1,3 @@
+#!/bin/bash
+# Compilation
 g++ -ggdb `pkg-config --cflags opencv` -o `basename faces.cpp .cpp` faces.cpp `pkg-config --libs opencv`
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
