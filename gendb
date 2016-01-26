@@ -1,0 +1,3 @@
+#!/bin/bash
+# Generates the ;sv file from the data directory
+python create_csv.py data > faces.csv
