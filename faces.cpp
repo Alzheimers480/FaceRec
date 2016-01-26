@@ -34,9 +34,12 @@ int main(int argc, const char *argv[]) {
   
   model->train(images,labels);
 
-  Mat guess = imread("non-git/s10/10.pgm", CV_LOAD_IMAGE_GRAYSCALE);
+  Mat guess = imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE);
   int label_guess = model->predict(guess);
-
+  if(argc > 1) {
+    cout << argv[1] << endl;
+  }
+  
   cout << label_guess << endl;
   
   return 0;
