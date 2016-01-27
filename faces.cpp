@@ -58,7 +58,7 @@ int main(int argc, const char *argv[]) {
   int label; double confidence;
   model->predict(guess, label, confidence);
   
-  cout << "Label:" << label << endl;
+  cout << "Label:" << label+1 << endl;
   cout << "Confidence: " << confidence << endl;
   
   return 0;
