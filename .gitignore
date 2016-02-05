@@ -3,3 +3,5 @@ faces
 demo_faces
 *~
 *.csv
+testdata
+outfiles

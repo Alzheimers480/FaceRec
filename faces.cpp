@@ -30,7 +30,7 @@ static void read_csv(const string& filename, vector<Mat>& images, vector<int>& l
 
 int main(int argc, const char *argv[]) {
 
-  Ptr<FaceRecognizer> model = createLBPHFaceRecognizer();
+  Ptr<FaceRecognizer> model = createFisherFaceRecognizer();
   vector<Mat> images;
   vector<int> labels;
 
@@ -38,8 +38,9 @@ int main(int argc, const char *argv[]) {
   read_csv(argv[1], images, labels);
   
   model->train(images,labels);
-  
-  Mat guess = imread(argv[2], CV_LOAD_IMAGE_GRAYSCALE);
+
+    Mat guess = imread(argv[2], CV_LOAD_IMAGE_GRAYSCALE);
+    
   int label; double confidence;
   model->predict(guess, label, confidence);
   

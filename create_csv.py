@@ -2,7 +2,7 @@ import sys
 import os.path
 
 # This is a tiny script to help you creating a CSV file from a face
-# database with a similar hierarchie:
+# database with a similar hierarchy:
 # 
 #  philipp@mango:~/facerec/data/at$ tree
 #  .
@@ -38,5 +38,5 @@ if __name__ == "__main__":
             subject_path = os.path.join(dirname, subdirname)
             for filename in os.listdir(subject_path):
                 abs_path = "%s/%s" % (subject_path, filename)
-                print "%s%s%d" % (abs_path, SEPARATOR, label)
+                print "%s%s%d" % (os.path.abspath(abs_path), SEPARATOR, label)
             label = label + 1
