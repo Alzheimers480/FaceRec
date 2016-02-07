@@ -6,3 +6,4 @@ demo_faces
 testdata
 outfiles
 model.xml
+*.zip
