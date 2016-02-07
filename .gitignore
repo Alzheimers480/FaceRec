@@ -5,3 +5,4 @@ demo_faces
 *.csv
 testdata
 outfiles
+model.xml
